@@ -1,9 +1,9 @@
 // Imports
 
-import { env } from "process";
-import Express from "express";
-import path from "path";
-import cors from "cors";
+const { env } = require("process");
+const Express = require("express");
+const path = require("path");
+const cors = require("cors");
 
 // Presets
 
@@ -25,7 +25,7 @@ app.listen(2000, () => {
 
 // API-Imports
 
-import apiRouter from "./routes/api";
+const apiRouter = require("./routes/api");
 
 // Code
 
