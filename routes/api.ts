@@ -1,6 +1,6 @@
 // Imports
 
-import Express from "express";
+const Express = require("express");
 
 // Presets
 
