@@ -25,8 +25,8 @@ app.listen(2000, () => {
 
 // API-Imports
 
-const apiRouter = require("routes/api");
+// const apiRouter = require("./routes/api");
 
 // Code
 
-app.use("/api", apiRouter);
+// app.use("/api", apiRouter);
