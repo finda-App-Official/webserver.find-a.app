@@ -20,6 +20,6 @@ export interface Event {
   user: {
     name: "rieke" | "lasse" | "leon" | "ines" | "philipp";
   };
-  type: "created" | "cleared" | "changedHTML";
+  type: "created" | "cleared" | "changedHTML" | "checked";
   date: Date;
 }
