@@ -18,7 +18,7 @@ export interface Job {
 }
 export interface LogEvent {
   user: {
-    name: "rieke" | "lasse" | "leon" | "ines" | "philipp";
+    name: "rieke" | "lasse" | "leon" | "ines" | "philipp" | string;
   };
   type: "created" | "cleared" | "changedHTML" | "checked";
   date: Date;
