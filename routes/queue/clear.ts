@@ -30,6 +30,8 @@ clearRouter.delete("/", (req, res) => {
     queue.pending = pending;
     fs.writeJsonSync("data/queue.json", queue, { spaces: 4 });
     return res.status(201);
+  } else {
+    return res.status(401);
   }
 });
 
