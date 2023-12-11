@@ -16,7 +16,7 @@ export interface Job {
     email: string;
   };
 }
-export interface Event {
+export interface LogEvent {
   user: {
     name: "rieke" | "lasse" | "leon" | "ines" | "philipp";
   };
