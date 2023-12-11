@@ -14,26 +14,30 @@ const addRouter = Express.Router();
 addRouter.post("/?type=:type/?email=:email", (req, res) => {
   if (req.params.type === "sponsors") {
   } else if (req.params.type === "public") {
+    let stat: number = 0;
     fetch("https://api.brevo.com/v3/contacts", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
-        "api-key": String(process.env["PUBLIC_KEY"]),
+        "api-key": <string>process.env["PUBLIC_KEY"],
       },
-      body: JSON.stringify({ email: req.params.email }),
+      body: JSON.stringify({ email: req.params.email, listIds: [4] }),
       method: "POST",
     })
-      .then((response) => {
-        if (response.ok) {
-          return response;
+      .then((resp) => {
+        if (resp.ok) {
+          fetch;
         }
-      })
-      .then((response) => {
-        return res.status(200);
+        return resp;
       })
       .catch((err) => {
         return res.status(500).json(err);
       });
+    if (stat === 0) {
+      return res.status(400);
+    } else {
+      return res.status(200);
+    }
   }
 });
 
