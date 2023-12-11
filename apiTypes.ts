@@ -11,6 +11,10 @@ interface Job {
     name: string;
     id: string;
   };
+  creator: {
+    name: string;
+    email: string;
+  };
 }
 
 export default Job;
