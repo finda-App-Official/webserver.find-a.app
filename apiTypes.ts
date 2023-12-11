@@ -1,4 +1,4 @@
-interface Job {
+export interface Job {
   type: "sponsors" | "public";
   message: {
     type: "welcome" | "normal" | "canceled";
@@ -16,5 +16,10 @@ interface Job {
     email: string;
   };
 }
-
-export default Job;
+export interface Event {
+  user: {
+    name: "rieke" | "lasse" | "leon" | "ines" | "philipp";
+  };
+  type: "created" | "cleared" | "changedHTML";
+  date: Date;
+}
