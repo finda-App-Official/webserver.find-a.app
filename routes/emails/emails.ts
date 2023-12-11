@@ -12,7 +12,7 @@ import addRouter from "./addContact";
 
 // Code
 
-emailsRouter.use("/addContact", addRouter);
+emailsRouter.use("/add", addRouter);
 
 // Exports
 
