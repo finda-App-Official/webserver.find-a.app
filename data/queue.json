@@ -1,5 +1,9 @@
 {
   "pending": [],
   "done": [],
-  "left": 300
+  "left": 300,
+  "html": {
+    "public": "",
+    "sponsor": ""
+  }
 }
