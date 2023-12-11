@@ -16,7 +16,7 @@ app.use(Express.json());
 app.use(
   cors({
     methods: ["GET", "POST", "DELETE", "PATCH"],
-    origin: "https://*.find-a.app/*",
+    origin: "*",
   })
 );
 app.listen(2000, () => {
