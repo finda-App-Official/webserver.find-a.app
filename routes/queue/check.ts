@@ -26,7 +26,7 @@ checkRouter.get("/", (req, res) => {
       },
       date: new Date(),
     });
-    fs.writeJsonSync("data/logs.json", logs, { spaces: 4 });
+    fs.writeJsonSync("data/logs.json", { events: logs }, { spaces: 4 });
     if (pending.length > 0) {
       return res.status(201);
     } else {
