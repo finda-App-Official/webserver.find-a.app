@@ -16,7 +16,7 @@ export interface Job {
     email: string;
   };
   createdAt: Date;
-  finishedAt: Date;
+  finishedAt: Date | undefined;
 }
 export interface LogEvent {
   user: {
