@@ -15,6 +15,8 @@ export interface Job {
     name: string;
     email: string;
   };
+  createdAt: Date;
+  finishedAt: Date;
 }
 export interface LogEvent {
   user: {
