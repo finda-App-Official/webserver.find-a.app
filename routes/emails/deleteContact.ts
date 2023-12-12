@@ -1,6 +1,6 @@
 // Imports
 
-import Express, { response } from "express";
+import Express from "express";
 import dotenv from "dotenv";
 
 // Presets
