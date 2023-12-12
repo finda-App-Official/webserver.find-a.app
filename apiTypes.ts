@@ -1,5 +1,5 @@
 export interface Job {
-  type: "sponsors" | "public";
+  type: string | "sponsors" | "public";
   message: {
     type: "welcome" | "normal" | "canceled";
     content: {
