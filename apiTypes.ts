@@ -9,7 +9,6 @@ export interface Job {
   };
   user: {
     email: string;
-    id: string;
   };
   creator: {
     name: string;
