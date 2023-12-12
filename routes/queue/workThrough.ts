@@ -14,6 +14,7 @@ const done: Job[] = fs.readJsonSync("data/queue.json").done;
 const logs: LogEvent[] = fs.readJsonSync("data/logs.json").events;
 
 // Code
+
 async function workThrough() {
   for (let i = 0; i < pending.length; i++) {
     if (queue > 0) {
