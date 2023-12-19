@@ -16,24 +16,30 @@ let env = dotenv.config();
 // Code
 
 checkRouter.get("/", (req, res) => {
+  console.log("1");
   if (
     validate(String(req.headers["user"]), String(req.headers["authorization"]))
   ) {
-    logs.push({
-      type: "checked",
-      user: {
-        name: String(req.headers["user"]),
-      },
-      date: new Date(),
-    });
-    fs.writeJsonSync("data/logs.json", { events: logs }, { spaces: 4 });
+    console.log("2");
     if (pending.length > 0) {
-      return res.status(201);
+      console.log("4");
+      logs.push({
+        type: "checked",
+        user: {
+          name: String(req.headers["user"]),
+        },
+        date: new Date(),
+      });
+      fs.writeJsonSync("data/logs.json", { events: logs }, { spaces: 4 });
+      console.log("Hallo");
+      res.status(201);
     } else {
-      return res.status(404);
+      console.log("5");
+      res.status(404);
     }
   } else {
-    return res.status(401);
+    res.status(401);
+    console.log("3");
   }
 });
 

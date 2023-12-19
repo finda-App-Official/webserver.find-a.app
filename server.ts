@@ -21,13 +21,8 @@ app.use(
     origin: "*",
   })
 );
-app.listen(2000, () => {
-  console.log("Server running on port 2000");
-  setInterval(() => {
-    if (pending.length > 0) {
-      workThrough();
-    }
-  }, 1);
+app.listen(5000, () => {
+  console.log("Server running on port 4000");
 });
 
 // API-Imports
@@ -38,4 +33,9 @@ import { Job } from "./apiTypes";
 
 // Code
 
-// app.use("/api", apiRouter);
+app.use("/api", apiRouter);
+setInterval(() => {
+  if (pending.length > 0) {
+    workThrough();
+  }
+}, 1);

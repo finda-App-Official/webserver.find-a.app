@@ -18,4 +18,6 @@ apiRouter.use("/emails", emailsRouter);
 
 // Exports
 
-export default apiRouter;
+export default (): Express.Router => {
+  return apiRouter;
+};
