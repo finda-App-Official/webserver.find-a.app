@@ -1,5 +1,5 @@
-import { getContacts } from "db/newsletter";
-import { getSponsors } from "db/sponsors";
+import { getContacts } from "../db/newsletter";
+import { getSponsors } from "../db/sponsors";
 import express from "express";
 import { transporter } from "../index";
 

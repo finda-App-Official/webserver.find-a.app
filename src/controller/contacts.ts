@@ -1,4 +1,8 @@
-import { createContact, deleteContact, getContactByMail } from "db/newsletter";
+import {
+  createContact,
+  deleteContact,
+  getContactByMail,
+} from "../db/newsletter";
 import express from "express";
 import { transporter } from "../index";
 import welcomeMail from "../presets/welcome-mail";
