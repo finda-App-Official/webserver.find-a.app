@@ -5,7 +5,11 @@ const SponsorSchema = new mongoose.Schema({
   name: { type: String, required: true },
 });
 
-export const SponsorModel = mongoose.model("Sponsor", SponsorSchema);
+export const SponsorModel = mongoose.model(
+  "Sponsor",
+  SponsorSchema,
+  "sponsors"
+);
 
 export const getSponsors = () => SponsorModel.find();
 export const deleteSponsor = (id: string) =>
