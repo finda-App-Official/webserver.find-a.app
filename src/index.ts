@@ -49,9 +49,9 @@ mongoose.connection.on("error", (err: Error) => console.log(err));
 
 // Code
 
-server.listen(2000, () => {
+server.listen(1000, () => {
   console.log(
-    "Server running on local port 2000 with url 'http://localhost:2000/'"
+    "Server running on local port 1000 with url 'http://localhost:1000/'"
   );
 });
 
