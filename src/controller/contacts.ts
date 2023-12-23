@@ -46,9 +46,9 @@ export const deleteC = async (req: express.Request, res: express.Response) => {
 
     const deletedContact = await deleteContact(id);
 
-    return res.json(deletedContact);
+    return res.json(deletedContact).status(200).end();
   } catch (error) {
     console.log(error);
-    res.sendStatus(500);
+    return res.sendStatus(500);
   }
 };
