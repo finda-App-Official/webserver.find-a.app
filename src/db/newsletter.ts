@@ -8,7 +8,11 @@ const ContactSchema = new mongoose.Schema({
   },
 });
 
-export const ContactModel = mongoose.model("Contact", ContactSchema);
+export const ContactModel = mongoose.model(
+  "Contact",
+  ContactSchema,
+  "newsletter"
+);
 
 export const getContacts = () => ContactModel.find();
 export const deleteContact = (id: string) =>
