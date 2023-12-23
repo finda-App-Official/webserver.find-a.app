@@ -1,8 +1,7 @@
 import { createContact, deleteContact, getContactByMail } from "db/newsletter";
 import express from "express";
-import transporter from "../index";
+import { transporter } from "../index";
 import welcomeMail from "../presets/welcome-mail";
-import { idText } from "typescript";
 
 export const addC = async (req: express.Request, res: express.Response) => {
   try {
