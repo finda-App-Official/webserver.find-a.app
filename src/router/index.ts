@@ -6,6 +6,7 @@ import express from "express";
 
 import contacts from "./contacts";
 import email from "./emails";
+import logs from "./logs";
 
 // Constants
 
@@ -16,5 +17,6 @@ const router = express.Router();
 export default (): express.Router => {
   contacts(router);
   email(router);
+  logs(router);
   return router;
 };
