@@ -8,25 +8,12 @@ import compression from "compression";
 import mongoose from "mongoose";
 import env from "dotenv";
 import cors from "cors";
-import nodemailer from "nodemailer";
 
 // Project-Imports
 
 import router from "./router/index";
 
 // Presets
-// Configs
-
-export const transporter = nodemailer.createTransport({
-  host: "mail.agenturserver.de",
-  port: 25,
-  secure: true,
-  auth: {
-    user: "info@find-a.app",
-    pass: process.env["SMTPPASS"],
-  },
-});
-env.config();
 
 const app = express();
 const server = http.createServer(app);
