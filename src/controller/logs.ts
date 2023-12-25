@@ -1,4 +1,4 @@
-import { getLogs, createLog, getLogByDate, getLogById } from "../db/logs";
+import { getLogs } from "../db/logs";
 import express from "express";
 
 export const getAllLogs = async (
