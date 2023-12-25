@@ -10,5 +10,5 @@ import { sendMailToNewsletter, sendMailToSponsors } from "../controller/emails";
 
 export default (router: express.Router) => {
   router.post("/newsletter/sponsors", sendMailToSponsors);
-  router.post("/newsletter/", sendMailToNewsletter);
+  router.post("/newsletter/all", sendMailToNewsletter);
 };
