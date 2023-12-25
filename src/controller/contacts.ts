@@ -4,8 +4,6 @@ import {
   getContactByMail,
 } from "../db/newsletter";
 import express from "express";
-import { transporter } from "../index";
-import welcomeMail from "../presets/welcome-mail";
 
 export const addC = async (req: express.Request, res: express.Response) => {
   try {
@@ -29,15 +27,6 @@ export const addC = async (req: express.Request, res: express.Response) => {
       },
     });
 
-    await transporter
-      .sendMail({
-        from: '"finda Newsletter" <news@find-a.app>',
-        to: email,
-        subject: "Willkommen beim finda Newsletter",
-        html: welcomeMail,
-      })
-      .catch((err) => console.log(err));
-
     return res.status(200).json(contact).end();
   } catch (error) {
     console.log(error);
@@ -53,6 +42,6 @@ export const deleteC = async (req: express.Request, res: express.Response) => {
     return res.json(deletedContact).status(200).end();
   } catch (error) {
     console.log(error);
-    return res.sendStatus(500);
+    return res.sendStatus(500).json(error).end();
   }
 };
