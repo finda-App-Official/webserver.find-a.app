@@ -33,6 +33,6 @@
     "@types/cookie-parser": "^1.4.6",
     "@types/mongoose": "^5.11.97",
     "@types/nodemailer": "^6.4.14",
-    "cloudmailin": "^0.0.3"
+    "cloudmailin": "^0.1.0"
   }
 }
